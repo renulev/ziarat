@@ -8,7 +8,7 @@ def main():
 	files = sorted([f for f in input_dir.iterdir() if f.is_file()])
 	
 	with open(output_file, "w", encoding="utf-8") as outfile:
-		outfile.write("#outline(title: [الفهرس])\n\n")
+		outfile.write("#outline(title: [الفهرس])\n#pagebreak()\n\n")
 		
 		for file_path in files:
 			chapter_name = file_path.stem.replace("_", " ")
